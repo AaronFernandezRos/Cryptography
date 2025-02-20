@@ -24,13 +24,9 @@ print("Mensaje Cifrado:", mensaje_cifrado)
 #Guardar en archivo texto cifrado(binario)
 with open("archivos/cifrado.txt", "wb") as file:
     file.write(mensaje_cifrado)
-
-#Leer mensaje cifrado
-with open("archivos/cifrado.txt", "rb") as file:
-    mensaje_cifrado_leido = file.read()
 print("-----------------------------------")
-# 3. Descifrar el mensaje
-mensaje_descifrado = cipher.decrypt(mensaje_cifrado_leido).decode()
+    
+mensaje_descifrado = cipher.decrypt(mensaje_cifrado).decode()
 print("Mensaje Descifrado:", mensaje_descifrado)
 
 #Guardar en archivo texto descifrado
